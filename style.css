@@ -1,0 +1,47 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: dimgray;
+	display: flex;
+	height: 100vh;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+header {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	margin: 0;
+}
+
+input {
+	width: 64px;
+}
+
+#container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	max-width: 768px;
+}
+
+.box {
+	border: 1px solid black;
+	margin: 0;
+	padding: 0;
+	width: 8px;
+	aspect-ratio: 1/1;
+}
