@@ -4,17 +4,20 @@ const x = document.querySelector("#x");
 const y = document.querySelector("#y");
 
 for (let i = 1; i < 16; i++){
+	let row = document.createElement("div");
+	row.setAttribute("class", "row");
+	container.appendChild(row);
 	for (let j = 1; j < 16; j++){
-		const
+		let box = document.createElement("div");
+		box.setAttribute("class", "box");
+		row.appendChild(box);
 	}
-	const box = document.createElement("div");
-	box.setAttribute("class", "box");
-	container.appendChild(box);
 }
 
 container.addEventListener("mouseover", function(event) {
 	if (event.target.id == !"container"){
 	event.target.style.backgroundColor = "black";
+	event.target.style.opacity = "100%";
 	}
 });
 
@@ -24,9 +27,11 @@ function newGrid() {
 	};
 	
 	for (let i = 1; i < x.value; i++){
-		let row = document.createElement("section");
+		let row = document.createElement("div");
+		row.setAttribute("class", "row");
+		container.appendChild(row);
 		for (let j = 1; j < y.value; j++){
-		const box = document.createElement("div");
+		let box = document.createElement("div");
 		box.setAttribute("class", "box");
 		row.appendChild(box);
 		};
