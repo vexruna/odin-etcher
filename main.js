@@ -56,9 +56,9 @@ function checkValue(sender) {
         sender.value = max;
     } else if (value<min) {
         sender.value = min;
-    } else {
+    } else if (isNaN(value)) {
 		sender.value = 1;
-	}
+	};
 }
 
 crbtn.addEventListener("click", newGrid);
