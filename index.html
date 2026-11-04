@@ -10,8 +10,8 @@
 		<header>
 			<h1>Etch-a-Sketch</h1>
 			<div>
-				<input id="x" type="number" name="grid-x" value="16" min="1" max="100">
-				<input id="y" type="number" name="grid-y" value="16" min="1" max="100">
+				<input id="x" type="number" name="grid-x" value="16" min="1" max="100" onchange="checkValue(this)">
+				<input id="y" type="number" name="grid-y" value="16" min="1" max="100" onchange="checkValue(this)">
 				<button id="crbtn" type="button">Create grid</button>
 			</div>
 		</header>

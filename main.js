@@ -48,4 +48,17 @@ function RandomRGB() {
 	return `rgb(${r},${g},${b})`;
 }
 
+function checkValue(sender) {
+    let min = sender.min;
+    let max = sender.max;
+    let value = parseInt(sender.value);
+    if (value>max) {
+        sender.value = max;
+    } else if (value<min) {
+        sender.value = min;
+    } else {
+		sender.value = 1;
+	}
+}
+
 crbtn.addEventListener("click", newGrid);
