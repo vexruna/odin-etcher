@@ -17,7 +17,9 @@ for (let i = 1; i < 16; i++){
 container.addEventListener("mouseover", function(event) {
 	if (event.target.id == !"container"){
 	event.target.style.backgroundColor = "black";
-	event.target.style.opacity = "100%";
+		if (event.target.style.opacity < 1){
+			event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+		}
 	}
 });
 
