@@ -3,11 +3,11 @@ const container = document.querySelector("#container");
 const x = document.querySelector("#x");
 const y = document.querySelector("#y");
 
-for (let i = 1; i < 16; i++){
+for (let i = 0; i < 16; i++){
 	let row = document.createElement("div");
 	row.setAttribute("class", "row");
 	container.appendChild(row);
-	for (let j = 1; j < 16; j++){
+	for (let j = 0; j < 16; j++){
 		let box = document.createElement("div");
 		box.setAttribute("class", "box");
 		row.appendChild(box);
@@ -28,11 +28,11 @@ function newGrid() {
 		container.removeChild(container.lastChild);
 	};
 	
-	for (let i = 1; i < x.value; i++){
+	for (let i = 0; i < x.value; i++){
 		let row = document.createElement("div");
 		row.setAttribute("class", "row");
 		container.appendChild(row);
-		for (let j = 1; j < y.value; j++){
+		for (let j = 0; j < y.value; j++){
 		let box = document.createElement("div");
 		box.setAttribute("class", "box");
 		row.appendChild(box);
