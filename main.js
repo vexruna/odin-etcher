@@ -16,7 +16,7 @@ for (let i = 1; i < 16; i++){
 
 container.addEventListener("mouseover", function(event) {
 	if (event.target.id == !"container"){
-	event.target.style.backgroundColor = "black";
+	event.target.style.backgroundColor = RandomRGB();
 		if (event.target.style.opacity < 1){
 			event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
 		}
@@ -39,5 +39,13 @@ function newGrid() {
 		};
 	};
 };
+
+function RandomRGB() {
+	const r = Math.floor(Math.random() * 256);
+	const g = Math.floor(Math.random() * 256);
+	const b = Math.floor(Math.random() * 256);
+
+	return `rgb(${r},${g},${b})`;
+}
 
 crbtn.addEventListener("click", newGrid);
